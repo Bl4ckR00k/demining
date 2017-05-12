@@ -1,0 +1,30 @@
+﻿<Window x:Class="demining.gui.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d"
+        Title="demining" Height="565" Width="525">
+    <DockPanel LastChildFill="True">
+        <DockPanel.Background>
+            <ImageBrush ImageSource="Resources/grass.png" Stretch="UniformToFill"/>
+        </DockPanel.Background>
+        <StackPanel Name="pnlTitle" DockPanel.Dock="Top" Orientation="Horizontal" Height="40">
+            <Button Name="btnNewGame"  Content="Neu" Width="50" Click="BtnNewGame_Click" FontWeight="Bold" FontFamily="Tahoma" Background="#00DDDDDD" BorderBrush="#00707070" Foreground="White" FontSize="14"/>
+            <Label Name="lbViewOption" Content="(+)" Width="40" Height="40" MouseLeftButtonDown="LbViewOption_MouseLeftButtonDown" VerticalContentAlignment="Center" VerticalAlignment="Center" HorizontalAlignment="Center" HorizontalContentAlignment="Center" FontWeight="Bold" FontSize="12" FontFamily="Tahoma" Foreground="White"/>
+            <StackPanel Name="pnlOptions" DockPanel.Dock="Top" Orientation="Horizontal" Height="30" Visibility="Visible">
+                <Label Name="lblColumn" Content="Spalten:" VerticalContentAlignment="Center" VerticalAlignment="Center" HorizontalAlignment="Center" HorizontalContentAlignment="Center" Foreground="#FFFBFBFB" FontFamily="Tahoma"/>
+                <TextBox Name="tbxColumn" Width="30" Text="9" VerticalContentAlignment="Center" VerticalAlignment="Center" HorizontalAlignment="Center" HorizontalContentAlignment="Center" BorderBrush="White" Background="#00000000" Foreground="White" FontFamily="Tahoma" FontSize="14" FontWeight="Bold" BorderThickness="0,0,0,1" Margin="5,0"/>
+                <Label Name="lblRow" Content="Reihen:"  VerticalContentAlignment="Center" VerticalAlignment="Center" HorizontalAlignment="Center" HorizontalContentAlignment="Center" Foreground="#FFFBFBFB" FontFamily="Tahoma"/>
+                <TextBox Name="tbxRow" Width="30" Text="9" VerticalContentAlignment="Center" VerticalAlignment="Center" HorizontalAlignment="Center" HorizontalContentAlignment="Center" BorderBrush="White" Background="#00000000" Foreground="White" FontFamily="Tahoma" FontSize="14" FontWeight="Bold" BorderThickness="0,0,0,1" Margin="5,0"/>
+                <Label Name="lblMines" Content="Minen:"  VerticalContentAlignment="Center" VerticalAlignment="Center" HorizontalAlignment="Center" HorizontalContentAlignment="Center" Foreground="#FFFBFBFB" FontFamily="Tahoma"/>
+                <TextBox Name="tbxMines" Width="30" Text="10" VerticalContentAlignment="Center" VerticalAlignment="Center" HorizontalAlignment="Center" HorizontalContentAlignment="Center" BorderBrush="White" Background="#00000000" Foreground="White" FontFamily="Tahoma" FontSize="14" FontWeight="Bold" BorderThickness="0,0,0,1" Margin="5,0"/>
+                <Label Name="placeholder1" Width="75"/>
+            </StackPanel>
+            <Label Name="lblGameMessage" Height="40" Width="350" VerticalContentAlignment="Center" VerticalAlignment="Center" HorizontalAlignment="Center" HorizontalContentAlignment="Center" FontWeight="Bold" FontSize="12" FontFamily="Tahoma" Foreground="White" Background="#59FFFFFF" Margin="0,5"/>
+        </StackPanel>
+        <DockPanel LastChildFill="True" DockPanel.Dock="Top">
+            <UniformGrid x:Name="Spielfeld" Margin="25" />
+        </DockPanel>
+    </DockPanel>
+</Window>
